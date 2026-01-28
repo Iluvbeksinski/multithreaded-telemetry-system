@@ -12,17 +12,19 @@
 
 #include <fstream>
 #include "decode.hpp"
-
+#include <filesystem>
 
 
 int main(int argc, char** argv)
 {
+    std::filesystem::create_directories("logs");
     // do not let compiler assume variable do not change across threads, thus use atomic
     // main thread is running along with producer consumer, hence atomic 
     // main thread is seeing decode as 0 and consumer is updating it
     // therefore we need to make decode shared / able to be seen and updated across threads
     (void)argc; (void)argv;
 
+    
     using clock = std::chrono::steady_clock;
 
     ByteQueue q;
