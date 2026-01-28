@@ -1,0 +1,28 @@
+# Build outputs
+/build/
+/out/
+/bin/
+/cmake-build-*/
+/CMakeFiles/
+/CMakeCache.txt
+cmake_install.cmake
+Makefile
+*.o
+*.obj
+*.a
+*.lib
+*.so
+*.dll
+*.exe
+
+# IDE
+.vscode/
+*.code-workspace
+
+# Runtime output
+logs/
+*.csv
+
+# OS junk
+.DS_Store
+Thumbs.db
